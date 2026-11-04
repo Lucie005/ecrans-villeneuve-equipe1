@@ -22,6 +22,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.HashSet;
+import java.util.ArrayList;
 
 /**
  * Orchestration seulement : charger, faire décider le domaine, enregistrer, puis appeler le PSP.
@@ -51,9 +53,37 @@ public class ReserverDesPlacesService implements ReserverDesPlaces {
 
     @Override
     public Reservation executer(DemandeReservation demande) {
-        // TODO étape 3
-        // INDICE : même schéma qu'au TP3. Le prix de chaque billet vient de la grille (B6),
-        // INDICE : et PayVia n'est appelé qu'une fois tout enregistré.
-        throw new UnsupportedOperationException("À compléter : étape 3");
+        // 1. Prendre l'heure actuelle et générer un nouvel ID de commande
+        LocalDateTime maintenant = LocalDateTime.now(horloge);
+        CommandeId commandeId = CommandeId.nouvelle();
+
+        // 2. Transformer chaque DemandeBillet en Billet avec son tarif figé (B6)
+        List<Billet> billets = new ArrayList<>();
+        Set<PlaceId> placesDemandees = new HashSet<>(); // Pour l'envoyer à la séance ensuite
+
+        for (DemandeBillet db : demande.billets()) {
+            Tarif tarif = new Tarif(db.categorie(), grille.prix(demande.seance(), db.categorie()));
+            billets.add(new Billet(db.place(), tarif));
+            placesDemandees.add(db.place());
+        }
+
+        // 3. Charger la séance depuis la base (ou mémoire)
+        Seance seance = seances.parId(demande.seance())
+                .orElseThrow(() -> new SeanceInconnue(demande.seance()));
+
+        // 4. Faire décider le domaine !
+        // La séance bloque les places (tout ou rien), puis la commande se crée
+        LocalDateTime finBlocage = seance.bloquer(placesDemandees, commandeId, maintenant);
+        Commande commande = Commande.creer(commandeId, seance.id(), billets, finBlocage);
+
+        // 5. Enregistrer les modifications
+        seances.enregistrer(seance);
+        commandes.enregistrer(commande);
+
+        // 6. Demander l'URL de paiement à PayVia
+        String urlPaiement = paiements.demanderPaiement(commandeId, commande.total());
+
+        // 7. Renvoyer le reçu de réservation au client
+        return new Reservation(commandeId, commande.total(), urlPaiement, finBlocage);
     }
 }
