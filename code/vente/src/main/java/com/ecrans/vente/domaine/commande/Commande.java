@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Agrégat « Commande » : 1 à 10 billets d'une même séance, payés en une fois.
@@ -50,9 +52,26 @@ public class Commande {
      * @throws PlaceEnDouble si une place apparaît deux fois
      */
     public static Commande creer(CommandeId id, SeanceId seance, List<Billet> billets, LocalDateTime expireA) {
-        // TODO étape 2
-        // INDICE : trois vérifications, puis new Commande(..., StatutCommande.EN_ATTENTE_PAIEMENT).
-        throw new UnsupportedOperationException("À compléter : étape 2");
+        // 1. Aucun billet
+        if (billets == null || billets.isEmpty()) {
+            throw new CommandeVide();
+        }
+
+        // 2. Plus de 10 billets (Règle B3)
+        if (billets.size() > MAX_PLACES) {
+            throw new TropDePlaces( billets.size());
+        }
+
+        // 3. Une même place deux fois (on utilise un Set, add() renvoie false si déjà présent)
+        Set<PlaceId> placesVues = new HashSet<>();
+        for (Billet billet : billets) {
+            if (!placesVues.add(billet.place())) {
+                throw new PlaceEnDouble(billet.place());
+            }
+        }
+
+        // 4. Tout est conforme, on crée la commande
+        return new Commande(id, seance, billets, expireA, StatutCommande.EN_ATTENTE_PAIEMENT);
     }
 
     /** Pour les adapters de persistance uniquement. */
@@ -63,8 +82,13 @@ public class Commande {
 
     /** B6 : la somme des prix figés dans les billets. */
     public Montant total() {
-        // TODO étape 2
-        throw new UnsupportedOperationException("À compléter : étape 2");
+        Montant montantTotal = Montant.ZERO;
+
+        for (Billet billet : billets) {
+            montantTotal = montantTotal.plus(billet.tarif().prix());
+        }
+
+        return montantTotal;
     }
 
     /**
@@ -74,9 +98,16 @@ public class Commande {
      * @throws TransitionInterdite depuis tout autre statut
      */
     public void payer(LocalDateTime maintenant) {
-        // TODO étape 2
-        // INDICE : changez le statut, puis evenements.add(new CommandePayee(...)).
-        throw new UnsupportedOperationException("À compléter : étape 2");
+        // 1. Si le statut n'est ni EN_ATTENTE_PAIEMENT ni EXPIREE
+        if (this.statut != StatutCommande.EN_ATTENTE_PAIEMENT && this.statut != StatutCommande.EXPIREE) {
+            throw new TransitionInterdite(id, statut, "payer");
+        }
+
+        // 2. Passez le statut à PAYEE
+        this.statut = StatutCommande.PAYEE;
+
+        // 3. Ajoutez l'événement à la liste interne
+        this.evenements.add(new CommandePayee(id, seance, places(), total(), maintenant));
     }
 
     /**
@@ -85,8 +116,16 @@ public class Commande {
      * @throws TransitionInterdite si la commande n'est pas EN_ATTENTE_PAIEMENT
      */
     public void expirer(LocalDateTime maintenant) {
-        // TODO étape 2
-        throw new UnsupportedOperationException("À compléter : étape 2");
+        // 1. Si le statut n'est pas EN_ATTENTE_PAIEMENT
+        if (this.statut != StatutCommande.EN_ATTENTE_PAIEMENT) {
+            throw new TransitionInterdite(id, statut, "faire expirer");
+        }
+
+        // 2. Passez le statut à EXPIREE
+        this.statut = StatutCommande.EXPIREE;
+
+        // 3. Ajoutez l'événement à la liste interne
+        this.evenements.add(new CommandeExpiree(id, seance, maintenant));
     }
 
     /** Bonus B13 : payée trop tard et places reprises. */

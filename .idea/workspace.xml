@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="initializing git repo...">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/domaine/seance/Seance.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/domaine/seance/Seance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DAT-Ecrans-de-Villeneuve.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DAT-Ecrans-de-Villeneuve.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/domaine/commande/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/domaine/commande/Commande.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,10 @@
     "accountId": "21b87c38-f368-47a9-8991-8b2dd65b4e50"
   }
 }]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -52,6 +51,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,7 +72,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CommandeTest">
+    <configuration name="CommandeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecrans-vente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecrans.vente.etape2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecrans.vente.etape2" />
+      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape2.CommandeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
@@ -90,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandeTest" />
         <item itemvalue="JUnit.SeanceTest" />
       </list>
     </recent_temporary>
@@ -102,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793797735992</updated>
       <workItem from="1793797737719" duration="659000" />
-      <workItem from="1793798447984" duration="1831000" />
+      <workItem from="1793798447984" duration="2119000" />
     </task>
     <task id="LOCAL-00001" summary="initializing git repo...">
       <option name="closed" value="true" />
