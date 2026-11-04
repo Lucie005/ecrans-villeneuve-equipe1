@@ -72,7 +72,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ReserverDesPlacesTest">
+  <component name="RunManager" selected="JUnit.ConfirmerPaiementTest">
     <configuration name="CommandeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
@@ -83,6 +83,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ecrans.vente.etape2" />
       <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape2.CommandeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfirmerPaiementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecrans-vente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecrans.vente.etape4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecrans.vente.etape4" />
+      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape4.ConfirmerPaiementTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,6 +135,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConfirmerPaiementTest" />
         <item itemvalue="JUnit.ReserverDesPlacesTest" />
         <item itemvalue="JUnit.CommandeTest" />
         <item itemvalue="JUnit.SeanceTest" />

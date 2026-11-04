@@ -37,9 +37,25 @@ public class ConfirmerPaiementService implements ConfirmerPaiement {
 
     @Override
     public void executer(CommandeId id) {
-        // TODO étape 4
-        // INDICE : même schéma qu'au TP3 (charger, faire décider le domaine, enregistrer, publier).
-        // INDICE : ici, la commande est payée ET ses places sont vendues.
-        throw new UnsupportedOperationException("À compléter : étape 4");
+        LocalDateTime maintenant = LocalDateTime.now(horloge);
+
+        // 1. Charger la commande (erreur si elle n'existe pas)
+        Commande commande = commandes.parId(id)
+                .orElseThrow(() -> new CommandeInconnue(id));
+
+        // 2. Charger la séance associée à cette commande
+        Seance seance = seances.parId(commande.seance())
+                .orElseThrow(() -> new SeanceInconnue(commande.seance()));
+
+        // 3. Faire décider le domaine : on vend les places, puis on paie la commande
+        seance.vendre(id, commande.places(), maintenant);
+        commande.payer(maintenant);
+
+        // 4. Enregistrer les deux agrégats modifiés
+        seances.enregistrer(seance);
+        commandes.enregistrer(commande);
+
+        // 5. Publier les événements (ex: CommandePayee) pour que le reste du système réagisse
+        commande.retirerEvenements().forEach(publicateur::publier);
     }
 }
