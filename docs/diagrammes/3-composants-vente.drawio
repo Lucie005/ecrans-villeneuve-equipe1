@@ -1,0 +1,13 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="3-composants-vente" id="3-composants-vente">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="titre" value="Comment la vente de places est-elle branchée sur le monde extérieur ?" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1000" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
