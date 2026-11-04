@@ -1,5 +1,6 @@
 package com.ecrans.vente.application.service;
 
+import com.ecrans.vente.application.exception.CommandeInconnue;
 import com.ecrans.vente.application.port.in.ExpirerBlocages;
 import com.ecrans.vente.application.port.out.Commandes;
 import com.ecrans.vente.application.port.out.PublicateurEvenements;
@@ -31,10 +32,32 @@ public class ExpirerBlocagesService implements ExpirerBlocages {
 
     @Override
     public void executer() {
-        // TODO étape 5
-        // INDICE : les séances d'abord (libererBlocagesExpires), puis les commandes concernées.
-        throw new UnsupportedOperationException("À compléter : étape 5");
+        LocalDateTime maintenant = LocalDateTime.now(horloge);
+
+        // 1. Parcourir toutes les séances actuellement en vente
+        for (Seance seance : seances.enVente()) {
+
+            // 2. Libérer les places expirées de cette séance
+            Set<CommandeId> commandesConcernees = seance.libererBlocagesExpires(maintenant);
+
+            // 3. S'il y a des commandes impactées, on enregistre la séance
+            if (!commandesConcernees.isEmpty()) {
+                seances.enregistrer(seance);
+
+                // 4. On expire les commandes associées
+                for (CommandeId cmdId : commandesConcernees) {
+                    Commande commande = commandes.parId(cmdId)
+                            .orElseThrow(() -> new CommandeInconnue(cmdId));
+
+                    // Si elle attendait bien son paiement, on l'expire
+                    if (commande.statut() == StatutCommande.EN_ATTENTE_PAIEMENT) {
+                        expirer(commande, maintenant); // Méthode privée déjà fournie en bas du fichier
+                    }
+                }
+            }
+        }
     }
+
 
     private void expirer(Commande commande, LocalDateTime maintenant) {
         commande.expirer(maintenant);

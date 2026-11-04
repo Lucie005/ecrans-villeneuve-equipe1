@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="initializing git repo...">
-      <change beforePath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ReserverDesPlacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ReserverDesPlacesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ExpirerBlocagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ExpirerBlocagesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.CommandeTest.executor": "Run",
+    "JUnit.ConfirmerPaiementTest.executor": "Run",
+    "JUnit.ExpirerBlocagesTest.executor": "Run",
+    "JUnit.ReserverDesPlacesTest.executor": "Run",
+    "JUnit.ScenarioSoireeDuJeudiTest.executor": "Run",
     "JUnit.SeanceTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
@@ -72,7 +77,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ConfirmerPaiementTest">
+  <component name="RunManager" selected="JUnit.ScenarioSoireeDuJeudiTest">
     <configuration name="CommandeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
@@ -103,6 +108,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExpirerBlocagesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecrans-vente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecrans.vente.etape5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecrans.vente.etape5" />
+      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape5.ExpirerBlocagesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReserverDesPlacesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
@@ -118,16 +138,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScenarioSoireeDuJeudiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ecrans.vente.etape1.*" />
+          <option name="PATTERN" value="com.ecrans.vente.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ecrans.vente.etape1" />
-      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape1.SeanceTest" />
+      <option name="PACKAGE_NAME" value="com.ecrans.vente" />
+      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.ScenarioSoireeDuJeudiTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,10 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ScenarioSoireeDuJeudiTest" />
+        <item itemvalue="JUnit.ExpirerBlocagesTest" />
         <item itemvalue="JUnit.ConfirmerPaiementTest" />
         <item itemvalue="JUnit.ReserverDesPlacesTest" />
         <item itemvalue="JUnit.CommandeTest" />
-        <item itemvalue="JUnit.SeanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1793797735992</updated>
       <workItem from="1793797737719" duration="659000" />
-      <workItem from="1793798447984" duration="2343000" />
+      <workItem from="1793798447984" duration="4004000" />
     </task>
     <task id="LOCAL-00001" summary="initializing git repo...">
       <option name="closed" value="true" />
