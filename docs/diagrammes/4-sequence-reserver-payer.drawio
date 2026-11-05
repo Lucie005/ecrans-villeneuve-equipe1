@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" modified="2026-11-05T22:14:34.183Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="22.1.22" etag="8RgChr93F0jkDz5ZnnYx" type="embed">
+<mxfile host="drawio-plugin" modified="2026-11-05T22:52:29.160Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="22.1.22" etag="rnuY0trnu5Rd2bYSytuo" type="embed">
   <diagram name="4-sequence-reserver-payer" id="4-sequence-reserver-payer">
-    <mxGraphModel dx="2090" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2768" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -52,7 +52,7 @@
         <mxCell id="9" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
           <mxGeometry x="1160" y="240" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="10" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Agrégat Séance&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="9">
+        <mxCell id="10" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Agrégat Seance&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="9">
           <mxGeometry x="15" y="15" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="11">
