@@ -1,4 +1,4 @@
-<mxfile host="drawio-plugin" modified="2026-11-05T16:14:22.596Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="22.1.22" etag="tyNpEXLCFfM_sQiFTKQR" type="embed">
+<mxfile host="drawio-plugin" modified="2026-11-05T17:06:41.307Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="22.1.22" etag="aJ3NT9bAw-nGEjEi0Uo_" type="embed">
   <diagram name="2-context-map" id="2-context-map">
     <mxGraphModel dx="1067" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -30,16 +30,16 @@
         <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="38" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Conformité&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="10">
+        <mxCell id="38" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Conformist&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="10">
           <mxGeometry y="-4" relative="1" as="geometry">
             <mxPoint x="-4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
-          <mxGeometry x="467.5" y="640" width="105" height="70" as="geometry" />
+          <mxGeometry x="458.75" y="640" width="122.5" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;Portail &lt;br&gt;CNC&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
-          <mxGeometry x="12.5" y="5" width="80" height="60" as="geometry" />
+        <mxCell id="8" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;Portail &lt;br&gt;CNC&lt;br&gt;(Externe)&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
+          <mxGeometry x="6.25" y="5" width="110" height="90" as="geometry" />
         </mxCell>
         <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="2">
           <mxGeometry relative="1" as="geometry" />
