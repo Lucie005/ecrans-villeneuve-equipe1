@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="initializing git repo...">
+    <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes">
+      <change afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/VenteApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ExpirerBlocagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/application/service/ExpirerBlocagesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/vente/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,22 +18,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Lucie005"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lucie005&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lucie005/ecrans-villeneuve-equipe1.git",
-    "accountId": "21b87c38-f368-47a9-8991-8b2dd65b4e50"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lucie005/ecrans-villeneuve-equipe1.git&quot;,
+    &quot;accountId&quot;: &quot;4621a514-af22-455b-9861-5ceab32426b4&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -53,6 +55,7 @@
     "JUnit.ReserverDesPlacesTest.executor": "Run",
     "JUnit.ScenarioSoireeDuJeudiTest.executor": "Run",
     "JUnit.SeanceTest.executor": "Run",
+    "Maven.ecrans-vente [test].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -73,6 +76,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -189,7 +193,87 @@
       <option name="project" value="LOCAL" />
       <updated>1793798526676</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajout du 1er diagramme en format drawio">
+      <option name="closed" value="true" />
+      <created>1793888635415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1793888635416</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Début Phase 2 :&#10;Ajout du 1er diagramme en format drawio">
+      <option name="closed" value="true" />
+      <created>1793888811947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1793888811947</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Phase 2 :&#10;Modification diagramme 1 et jout du diagramme 2 en format drawio">
+      <option name="closed" value="true" />
+      <created>1793895406613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1793895406613</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Phase 2 :&#10;Correction orthographique des diagrammes 1 et 2">
+      <option name="closed" value="true" />
+      <created>1793898539245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793898539245</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Phase 2 :&#10;Ajout du diagramme 3">
+      <option name="closed" value="true" />
+      <created>1793898564955</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1793898564955</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Phase 2 :&#10;Ajout du diagramme 4">
+      <option name="closed" value="true" />
+      <created>1793917068321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793917068321</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Phase 3 (pas 2 je me suis trompé :&#10;Ajout du diagramme 5&#10;Correction des diagrammes 3 et 4">
+      <option name="closed" value="true" />
+      <created>1793919208745</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1793919208745</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Phase 3 :&#10;Ajout des diagrammes en png dans le dossier et dans le DAT">
+      <option name="closed" value="true" />
+      <created>1793919908074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1793919908074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Phase 3 :&#10;Correction des diagrammes en accord avec le readme">
+      <option name="closed" value="true" />
+      <created>1793920657768</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1793920657768</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes">
+      <option name="closed" value="true" />
+      <created>1793920760127</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1793920760127</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +292,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initializing git repo..." />
-    <option name="LAST_COMMIT_MESSAGE" value="initializing git repo..." />
+    <MESSAGE value="Ajout du 1er diagramme en format drawio" />
+    <MESSAGE value="Revert &quot;Ajout du 1er diagramme en format drawio&quot;&#10;&#10;This reverts commit 1cbbd8fe1901a1b51845caa832b12505ad588e38." />
+    <MESSAGE value="Début Phase 2 :&#10;Ajout du 1er diagramme en format drawio" />
+    <MESSAGE value="Phase 2 :&#10;Modification diagramme 1 et jout du diagramme 2 en format drawio" />
+    <MESSAGE value="Phase 2 :&#10;Correction orthographique des diagrammes 1 et 2" />
+    <MESSAGE value="Phase 2 :&#10;Ajout du diagramme 3" />
+    <MESSAGE value="Phase 2 :&#10;Ajout du diagramme 4" />
+    <MESSAGE value="Phase 3 (pas 2 je me suis trompé :&#10;Ajout du diagramme 5&#10;Correction des diagrammes 3 et 4" />
+    <MESSAGE value="Phase 3 :&#10;Ajout des diagrammes en png dans le dossier et dans le DAT" />
+    <MESSAGE value="Phase 3 :&#10;Correction des diagrammes en accord avec le readme" />
+    <MESSAGE value="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes" />
   </component>
 </project>
