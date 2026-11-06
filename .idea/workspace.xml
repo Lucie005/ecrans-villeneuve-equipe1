@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes">
-      <change afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/VenteApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="499ef007-e237-48e8-8e4b-8e1577e8fb01" name="Changes" comment="Etape 7.4 :&#10;création du fichier WebhookPayViaController">
+      <change afterPath="$PROJECT_DIR$/code/vente/src/main/java/com/ecrans/vente/adapter/in/web/GestionErreurs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/vente/src/test/java/com/ecrans/vente/etape7/ApiVenteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/vente/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/vente/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Lucie005&quot;
-  }
+  &quot;lastFilter&quot;: {}
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -37,6 +33,9 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1,
@@ -63,11 +62,13 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.VenteApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rahp1/Documents/Cours/B3/Architecture Hexagonale & DDD/TPfinal/code/vente/src/test/java/com/ecrans/vente",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,22 +82,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ScenarioSoireeDuJeudiTest">
-    <configuration name="CommandeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ecrans-vente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ecrans.vente.etape2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ecrans.vente.etape2" />
-      <option name="MAIN_CLASS_NAME" value="com.ecrans.vente.etape2.CommandeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rahp1\Documents\Cours\B3\Architecture Hexagonale &amp; DDD\TPfinal\code\vente\src\test\java\com\ecrans\vente" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.VenteApplication">
     <configuration name="ConfirmerPaiementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecrans-vente" />
       <extension name="coverage">
@@ -157,13 +148,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VenteApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="ecrans-vente" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecrans.vente.VenteApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecrans.vente.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.VenteApplication" />
         <item itemvalue="JUnit.ScenarioSoireeDuJeudiTest" />
         <item itemvalue="JUnit.ExpirerBlocagesTest" />
         <item itemvalue="JUnit.ConfirmerPaiementTest" />
         <item itemvalue="JUnit.ReserverDesPlacesTest" />
-        <item itemvalue="JUnit.CommandeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,11 +278,50 @@
       <option name="project" value="LOCAL" />
       <updated>1793920760127</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Etape 7.1 :&#10;modificatio de pom.xml et ajout de VenteApplication.java">
+      <option name="closed" value="true" />
+      <created>1793984692453</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1793984692453</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Etape 7.2 :&#10;création du fichier VenteConfiguration.java">
+      <option name="closed" value="true" />
+      <created>1793985620619</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1793985620619</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Etape 7.3 :&#10;création du package adapter/in/web/ et des fichiers le composant">
+      <option name="closed" value="true" />
+      <created>1793987126317</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1793987126317</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Etape 7.4 :&#10;création du fichier WebhookPayViaController">
+      <option name="closed" value="true" />
+      <created>1793988555710</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1793988555710</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -303,6 +347,10 @@
     <MESSAGE value="Phase 3 :&#10;Ajout des diagrammes en png dans le dossier et dans le DAT" />
     <MESSAGE value="Phase 3 :&#10;Correction des diagrammes en accord avec le readme" />
     <MESSAGE value="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Phase 3 :&#10;Correction du DAT avec les nouvelles version des diagrammes" />
+    <MESSAGE value="Etape 7.1 :&#10;modificatio de pom.xml et ajout de VenteApplication.java" />
+    <MESSAGE value="Etape 7.2 :&#10;création du fichier VenteConfiguration.java" />
+    <MESSAGE value="Etape 7.3 :&#10;création du package adapter/in/web/ et des fichiers le composant" />
+    <MESSAGE value="Etape 7.4 :&#10;création du fichier WebhookPayViaController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Etape 7.4 :&#10;création du fichier WebhookPayViaController" />
   </component>
 </project>
