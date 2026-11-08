@@ -1,7 +1,9 @@
 package com.ecrans.vente.config;
 
 import com.ecrans.vente.adapter.in.payvia.WebhookPayVia;
+import com.ecrans.vente.adapter.in.sortiesflash.AclSortiesFlash;
 import com.ecrans.vente.application.port.in.ConfirmerPaiement;
+import com.ecrans.vente.application.port.in.EnregistrerVentePartenaire;
 import com.ecrans.vente.application.port.in.ExpirerBlocages;
 import com.ecrans.vente.application.port.in.ReserverDesPlaces;
 import com.ecrans.vente.domaine.commun.PlaceId;
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.time.Clock;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,8 +48,18 @@ public class VenteConfiguration {
     }
 
     @Bean
+    EnregistrerVentePartenaire enregistrerVentePartenaire(ApplicationVente app) {
+        return app.enregistrerVentePartenaire;
+    }
+
+    @Bean
     WebhookPayVia webhookPayVia(ApplicationVente app) {
         return app.webhookPayVia;
+    }
+
+    @Bean
+    AclSortiesFlash aclSortiesFlash(ApplicationVente app) {
+        return app.aclSortiesFlash;
     }
 
     /** La Programmation n'existe pas encore : on publie à la main la séance S42,
@@ -58,8 +71,13 @@ public class VenteConfiguration {
             for (char rang = 'A'; rang <= 'H'; rang++) {
                 for (int n = 1; n <= 12; n++) plan.add(new PlaceId(rang, n));
             }
-            app.seances.enregistrer(Seance.ouverte(new SeanceId("S42"),
-                    LocalDate.now().plusDays(1).atTime(20, 30), plan));
+            LocalDate demain = LocalDate.now().plusDays(1);
+            SeanceId s42 = new SeanceId("S42");
+            app.seances.enregistrer(Seance.ouverte(s42, demain.atTime(20, 30), plan));
+
+            // Chez SortiesFlash, la même séance s'appelle « VIL-aaaammjj-2030-S3 » (annexe B)
+            app.correspondanceSeances.associer(
+                    "VIL-" + demain.format(DateTimeFormatter.BASIC_ISO_DATE) + "-2030-S3", s42);
         };
     }
 }
