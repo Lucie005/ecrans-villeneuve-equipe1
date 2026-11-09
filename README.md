@@ -6,11 +6,11 @@ Projet final du module **Concevoir une application numérique** (B3).
 
 ## Équipe
 
-| Membre | Étapes codées pendant le TP | Sections du DAT dont il ou elle est référent·e | Partie présentée à l'oral |
-|---|---|---|---|
-| Prénom Nom | … | … | … |
-| Prénom Nom | … | … | … |
-| Prénom Nom (si vous êtes trois) | … | … | … |
+| Membre         | Étapes codées pendant le TP | Sections du DAT dont il ou elle est référent·e | Partie présentée à l'oral |
+|----------------|-----------------------------|------------------------------------------------|---|
+| Raphaël PHAN   | étape 7 et diagrammes       | …                                              | … |
+| Lucie BARREZ   | étapes 1 à 6                | 4 à 6                                          | … |
+| THIBAUD TABARD | étape 8                     | …                                              | … |
 
 ## Organisation du dépôt
 
